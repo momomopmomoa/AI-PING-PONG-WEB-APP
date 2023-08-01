@@ -1,0 +1,17 @@
+body{
+    background-size: cover;
+}
+
+.heading{
+    text-align: left;
+    width: 100%;
+}
+
+.heading h3{
+    display: inline;
+}
+
+#instruction_btn{
+    display: inline;
+    float: right;
+}
