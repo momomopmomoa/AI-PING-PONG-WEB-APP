@@ -20,6 +20,34 @@
             <h3 id="app_title"><strong>AI PING PONG GAME</strong></h3>
             <button class="btn btn-info" id="instruction_btn" data-toggle="modal" data-target="#myModal">Instructions</button>
           </div>
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h3><strong>Instructions</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li><strong>
+                                You need to play this agme with your mouse
+                            </strong>
+                        </li>
+                            <li>
+                                <storng>
+                                    You need to hover your mouse one the screen which you can see on your canvas.
+                                </storng>
+                            </li>
+                            <li>
+                                <strong>
+                                    You have to avoid hitting your ball against the wall.
+                                </strong>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+          </div>
           <hr>
           <br><br>
             <button id="play_game" class="btn btn-success" onclick="playGame()"><strong>Play Game</strong></button>
