@@ -23,11 +23,12 @@ var ball = {
 
 function setup(){
   var canvas =  createCanvas(700,600);
+  canvas.parent();
   var video = createCapture(VIDEO);
   video.size(600, 550);
   video.hide();
   poseNet = ml5.poseNet(video, modalLoaded);
-  poseNEt.on('pose', gotPoses);
+  poseNet.on('pose', gotPoses);
 }
 
 function modalLoaded(){
