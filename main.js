@@ -1,5 +1,7 @@
 
 /*created by prashant shukla */
+var rightwristX = "";
+var rigthwristY = "";
 
 var paddle2 =10,paddle1=10;
 
@@ -31,11 +33,24 @@ function setup(){
   poseNet.on('pose', gotPoses);
 }
 
+function gotPoses(results){
+  if(results.length > 0){
+    rightwristX = results[0].pose.rightwrist.x;
+    rigthwristY = results[0].pose.rigthwrist.y;
+    console.log("rightwristX = "+ rightwristX+ "rightwristY = "+rigthwristY);
+  }
+}
+
 function modalLoaded(){
   console.log('Modal Loaded');
 }
 
 function draw(){
+  if(rightwrist > 0.2){
+    fill("#FF0000");
+    stroke("#0000FF");
+    circle(rightwristX, rigthwristY, 4);
+  }
 
   image(video, 0, 0, 600, 550);
 
