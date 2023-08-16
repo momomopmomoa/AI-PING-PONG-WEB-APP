@@ -28,7 +28,14 @@ scoreRightWrist = 0;
 //Define a variable to hold the status of the game
 var game_status = "";
 
- 
+ function preload(){
+  var ball_touch_paddel = loadSound("ball_touch_paddel.wav");
+  var missed_ball = loadSound("missed.wav");
+ }
+
+ function restart(){
+    loop();
+ }
 
 function setup(){
 var canvas =  createCanvas(700,600);
@@ -172,6 +179,7 @@ function move(){
     
   }
   else{
+    missed_ball.play();
     pcscore++;
     
     reset();
@@ -186,7 +194,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25);
     text("Game Over!",width/2,height/2);
-    text("Reload the page!",width/2,height/2+30)
+    text("Press the restart button to play again !",width/2,height/2+30)
     noLoop();
     pcscore = 0;
  }
